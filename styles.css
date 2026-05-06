@@ -4,19 +4,19 @@
 }
 body {
     margin: 0;
-    background: #fff8e1;
+    background: #ece7e7;
 }
 
 .container {
     max-width: 800px;
-    margin: 20 auto;
+    margin: 0 auto;
     padding: 32px 16px;
 }
 
 .card{
     background: #fff;
     border-radius: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
     padding: 16px;
     margin-bottom: 16px;
 }
@@ -107,11 +107,12 @@ th, td {
     padding: 12px;
     border: 1px solid #ddd;
     text-align: left;
-    h
 }
+
 .delete-btn {
     background: #dc3545;
 }
+
 .delete-btn:hover {
     background: #c82333;
 }
