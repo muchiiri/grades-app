@@ -3,7 +3,7 @@ const STORAGE_KEY = 'studentGrades';
 
 // Get references to DOM elements
 const gradeForm = document.getElementById('gradeForm');
-const gradeTableBody = document.getElementById('gradeTableBody');
+const gradeTableBody = document.getElementById('gradesTableBody');
 const message = document.getElementById('message');
 const clearAllBtn = document.getElementById('clearAllBtn');
 
@@ -78,7 +78,7 @@ gradeTableBody.innerHTML = grades
     .map(function (record) {
         return `
         <tr>
-            <td>${record.StudentName}</td>
+            <td>${record.name}</td>
             <td>${record.studentId}</td>
             <td>${record.studentGrade}</td>
             <td>${record.studentEmail}</td>
@@ -102,7 +102,7 @@ deleButtons.forEach(function(button) {
 function deleteGrade(recordid) {
     const grades = getGrades();
     const updatedGrades = grades.filter(function(record) {
-        return record.id !== recordid;
+        return record.id !== Number(recordid);
     });
     saveGrades(updatedGrades);
     renderGrades();
@@ -114,3 +114,5 @@ function showMessage(text, type) {
     message.textContent = text;
     message.className = `message ${type}`;
 }
+
+renderGrades();
